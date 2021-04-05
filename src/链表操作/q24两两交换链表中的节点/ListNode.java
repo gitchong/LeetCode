@@ -1,4 +1,4 @@
-package 链表操作.q25_k个一组翻转链表;
+package 链表操作.q24两两交换链表中的节点;
 
 
 public class ListNode {
@@ -9,14 +9,14 @@ public class ListNode {
         val = x;
     }
 
+
+
     public static ListNode listNode1(){
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(2);
         ListNode listNode3 = new ListNode(3);
-        ListNode listNode4 = new ListNode(4);
         listNode1.next = listNode2;
         listNode2.next = listNode3;
-        listNode3.next = listNode4;
         return listNode1;
     }
 

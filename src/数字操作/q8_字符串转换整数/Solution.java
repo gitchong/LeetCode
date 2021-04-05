@@ -19,11 +19,12 @@ public class Solution {
         }
 
         int rs = 0;
+        // 去掉正负号开始计算
         for (int i = 0; i < str.length(); i++) {
             char t = str.charAt(i);
             if (Character.isDigit(t)) {
                 int temp = rs * 10 - '0' + t;
-                if ((temp - t + '0') / 10 != rs || temp < 0) {
+                if ((temp - t + '0') / 10 != rs || temp < 0) {// temp < 0 做溢出判断， 前面的不太清楚干嘛的
                     return negative ? Integer.MIN_VALUE : Integer.MAX_VALUE;
                 }
                 rs = temp;
@@ -35,6 +36,9 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().myAtoi("2147483648"));
+        //System.out.println(new Solution().myAtoi("212222222222222222222222222222222222247483648"));
+        long s = (long)Integer.MAX_VALUE+2;
+        System.out.println(s);
+        System.out.println(new Solution().myAtoi(String.valueOf(s)));
     }
 }

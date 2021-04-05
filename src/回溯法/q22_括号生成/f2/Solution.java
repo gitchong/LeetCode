@@ -19,7 +19,7 @@ public class Solution {
             ans.add(cur);
             return;
         }
-
+        // ((())) (()()) (())() ()(()) ()()()
         if (open < max) {
             backtrack(ans, cur + "(", open + 1, close, max);
         }

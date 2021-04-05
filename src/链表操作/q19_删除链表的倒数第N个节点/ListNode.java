@@ -8,5 +8,13 @@ public class ListNode {
     ListNode(int x) {
         val = x;
     }
+
+    public void bianLi() {
+        ListNode temp = this;
+        while (temp != null) {
+            System.out.println(temp.val);
+            temp = temp.next;
+        }
+    }
 }
 

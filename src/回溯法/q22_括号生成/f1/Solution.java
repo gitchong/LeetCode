@@ -28,10 +28,13 @@ public class Solution {
         if (n < 1) {
             return rs;
         }
+        // 首先规定好（ 1个，n= 3时，一个6个括号， 还需遍历 2*n - 1次，
         String root = "(";
         rs.add(root);
+        // 因为从0开始，所以遍历2*n-1次
         for (int k = 0; k < 2 * n - 1; k++) {
             List<String> tempList = new ArrayList<>();
+            // 每次在之前存储的基础上增加左括号或者右括号
             for (int i = 0; i < rs.size(); i++) {
                 String temp = rs.get(i);
                 tempList.add(temp + "(");
@@ -45,6 +48,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        new Solution().generateParenthesis(3);
+        List<String> strings = new Solution().generateParenthesis(3);
+        strings.stream().forEach(System.out::println);
     }
 }
